@@ -10,4 +10,4 @@ Links from lessons:
 
 - [Positioning](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 
-- [tktk descriptive name of link]()
+- [The Complete Guide to CSS Grid from CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
