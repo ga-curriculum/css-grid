@@ -6,8 +6,8 @@
 
 Links from lessons:
 
-- [tktk descriptive name of link]()
+- [Floats](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
 
-- [tktk descriptive name of link]()
+- [Positioning](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 
 - [tktk descriptive name of link]()
