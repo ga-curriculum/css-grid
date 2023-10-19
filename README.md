@@ -10,6 +10,7 @@ Introduce the core concepts of CSS grid.
 
 | Lesson | Video Time | Video | Topics Covered |
 | ------ |:----------:|:-----:| -------------- |
+| [Setup](./concepts/README.md) | tktk min | [tktk Link]() | --- |
 | [Concepts](./concepts/README.md) | tktk min | [tktk Link]() | Discuss modern use cases of CSS grid. |
 | [Fundamentals](./fundamentals/README.md) | tktk min | [tktk Link]() | Explore the core principles of CSS grid, including grid creation, item placement, auto-placement, and visual grid areas.  |
 | [Practical Examples](./practical-examples/README.md) | tktk min | [tktk Link]() | Demonstrate grid with real world examples. |

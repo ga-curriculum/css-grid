@@ -16,4 +16,4 @@
 
 
 
-## `grid-area-placement`
+## `grid-template-areas`
