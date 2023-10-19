@@ -1,18 +1,20 @@
-# [tktk Module Name]
+# Grid
 
 ![Hero image](./assets/tktkhero-main.png)
 
 ## Module overview
 
-tktk What is the takeaway of this module?
+Introduce the core concepts of CSS grid.
 
 ## Content outline
 
 | Lesson | Video Time | Video | Topics Covered |
 | ------ |:----------:|:-----:| -------------- |
-| [tktk Microlesson Name](./tktk-microlesson-01/README.md) | tktk min | [tktk Link]() | tktk topics covered |
-| [tktk Microlesson Name](./tktk-microlesson-02/README.md) | tktk min | [tktk Link]() | tktk topics covered |
-| [tktk Microlesson Name](./tktk-microlesson-03/README.md) | tktk min | [tktk Link]() | tktk topics covered |
+| [Setup](./concepts/README.md) | tktk min | [tktk Link]() | --- |
+| [Concepts](./concepts/README.md) | tktk min | [tktk Link]() | Discuss modern use cases of CSS grid. |
+| [Fundamentals](./fundamentals/README.md) | tktk min | [tktk Link]() | Explore the core principles of CSS grid, including grid creation, item placement, auto-placement, and visual grid areas.  |
+| [Practical Examples](./practical-examples/README.md) | tktk min | [tktk Link]() | Demonstrate grid with real world examples. |
+| [Responsive Grids](./responsive-grids/README.md) | tktk min | [tktk Link]() | Adapt grid layouts for different screen sizes using media queries |
 |  **Total Module**                                        | tktk min | ---           | ---                 |
 
 ## Additional content 
