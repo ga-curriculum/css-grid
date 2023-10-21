@@ -55,13 +55,13 @@ body {
   background-color: gray;
   display: grid;
   font-family: sans-serif;
-	font-size: 24px;
-	margin: 0;
+  font-size: 24px;
+  margin: 0;
   padding: 10px;
   min-height: 100vh;
 }
 ```
-This code turns our `<body>` element into a **grid container**. Using `min-heigh: 100vh` makes the `<body>` fill at least the height of the browser window. 
+This code turns our `<body>` element into a **grid container**. Using `min-height: 100vh` makes the `<body>` fill at least the height of the browser window. 
 
 Now to add a bit of style. Let's go ahead and change the color of some of the HTML elements we added. In your `css/style.css` file, add this code:
 
