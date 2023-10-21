@@ -255,7 +255,7 @@ Lastly, let's make a stylistic change by creating a class that will center the t
 .flex-container {
   display: flex;
   align-items: center;
-	justify-content: center;
+  justify-content: center;
 }
 ```
 
