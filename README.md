@@ -1,10 +1,15 @@
 # ![CSS Grid](./assets/hero.png)
 
-## Module overview
+## About
 
 Introduce the core concepts of CSS grid.
 
-## Content outline
+## Prerequisites
+
+- HTML
+- CSS
+
+## Content
 
 | Lesson | Video Time | Video | Topics Covered |
 | ------ |:----------:|:-----:| -------------- |
@@ -15,15 +20,9 @@ Introduce the core concepts of CSS grid.
 | [Responsive Grids](./responsive-grids/README.md) | tktk min | [tktk Link]() | Adapt grid layouts for different screen sizes using media queries |
 |  **Total Module**                                        | tktk min | ---           | ---                 |
 
-## Additional content 
+## References
 
 📖 [Reference Materials](./references/README.md)
-
-### 🚀 Level Up
-
-- [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-01.md)
-- [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-02.md)
-- [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-03.md)
 
 ## Internal resources
 
