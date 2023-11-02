@@ -1,4 +1,4 @@
-# Setup
+# ![CSS Grid - Setup](./assets/hero.png)
 
 Open your Terminal application and navigate to your ~/code/sei/lectures directory:
 

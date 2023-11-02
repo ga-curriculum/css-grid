@@ -1,6 +1,4 @@
-# Grid
-
-![Hero image](./assets/tktkhero-main.png)
+# ![CSS Grid](./assets/hero.png)
 
 ## Module overview
 
