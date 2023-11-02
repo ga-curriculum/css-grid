@@ -1,6 +1,4 @@
-# Grid - Fundamentals
-
-![Hero image](./assets/hero.png)
+# ![CSS Grid - Fundamentals](./assets/hero.png)
 
 **Learning objective:** By the end of this lesson, students will explore the core principles of CSS Grid, including grid creation, item placement, auto-placement, and visual grid areas.
 
@@ -14,7 +12,7 @@ Grids are made of up of several components:
 
 This diagram is helpful for visualizing the role each of these components plays:
 
-![CSS Grid components -- tracks, cells, areas, and gaps](./assets/originals/grid-components.png)
+![CSS Grid components -- tracks, cells, areas, and gaps](./assets/grid-components.png)
 
 To read more in depth about grid and its various properties, check out [the Complete Guide to CSS Grid from CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
@@ -24,7 +22,7 @@ The foundation of any CSS Grid layout is the **grid container**, an HTML element
 
 Let's make our first grid! By the end of this lesson, we'll create something that looks like this:
 
-![CSS Grid lesson output](./assets/originals/grid-output.png)
+![CSS Grid lesson output](./assets/grid-output.png)
 
 In `index.html`, stub up your boilerplate and link to our CSS file:
 
@@ -80,7 +78,7 @@ footer {
 ```
 
 Right now, we should have something that looks like this:
-![Unstyled first output of CSS Grid exercise](./assets/originals/unstyled-grid.png)
+![Unstyled first output of CSS Grid exercise](./assets/unstyled-grid.png)
 
 ## Placing grid items
 Time to define the columns and rows necessary to bring our layout to life. Go back to the UI we want to design, and answer these questions:
@@ -97,7 +95,7 @@ The `fr` unit is used by CSS Grid to represent a *fraction* of the available spa
 
 Our output is a bit of a mess right now:
 
-![Disorganized web layout](assets/originals/grid1.png)
+![Disorganized web layout](assets/grid1.png)
 
 Notice the default behavior - each grid item gets placed in each cell across the columns from left to right. Next, let’s make both the <nav> and the <footer> span two columns each.
 
@@ -113,7 +111,7 @@ footer {
 ```
 
 Now we're making some progress!
-![Grid layout 2](./assets/originals/grid2.png)
+![Grid layout 2](./assets/grid2.png)
 
 We can achieve the same result with `span`, like so:
 ```css
@@ -156,7 +154,7 @@ Let's style the navbar with `grid-template-area`. Add the following code to `css
 ```
 This code allows us to layout our navbar as a horizontal row. 
 
-![A navbar in a horizontal line](assets/originals/horizontal-nav.png)
+![A navbar in a horizontal line](assets/horizontal-nav.png)
 
 But we could do even more with it if we wanted to. Watch what happens when we make the following change to our css:
 
@@ -173,7 +171,7 @@ But we could do even more with it if we wanted to. Watch what happens when we ma
 }
 ```
 
-![A nav bar split into two columns with CSS grid](./assets/originals/two-cols-nav.png)
+![A nav bar split into two columns with CSS grid](./assets/two-cols-nav.png)
 
 Pretty neat, right? Let's go ahead and change it back into a horizontal row:
 

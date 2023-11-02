@@ -1,4 +1,4 @@
-# [tktk Module Name] - Level Up - tktk Microlesson Name
+# CSS Grid - Level Up
 
 ![Hero image](./assets/hero.png)
 
