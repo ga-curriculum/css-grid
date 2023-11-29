@@ -6,19 +6,19 @@ Introduce the core concepts of CSS grid.
 
 ## Prerequisites
 
-- HTML
-- CSS
+- Intro to HTML
+- Intro to CSS
 
 ## Content
 
-| Lesson | Video Time | Video | Topics Covered |
-| ------ |:----------:|:-----:| -------------- |
-| [Setup](./concepts/README.md) | tktk min | [tktk Link]() | --- |
-| [Concepts](./concepts/README.md) | tktk min | [tktk Link]() | Discuss modern use cases of CSS grid. |
-| [Fundamentals](./fundamentals/README.md) | tktk min | [tktk Link]() | Explore the core principles of CSS grid, including grid creation, item placement, auto-placement, and visual grid areas.  |
-| [Practical Examples](./practical-examples/README.md) | tktk min | [tktk Link]() | Demonstrate grid with real world examples. |
-| [Responsive Grids](./responsive-grids/README.md) | tktk min | [tktk Link]() | Adapt grid layouts for different screen sizes using media queries |
-|  **Total Module**                                        | tktk min | ---           | ---                 |
+| Lesson | Video Time | Video | Skills |
+| ------ |:----------:|:-----:| ------ |
+| [Setup](./concepts/README.md)                         | -- | -- | Setting up the development environment |
+| [Concepts](./concepts/README.md)                      | -- | -- | Discuss modern use cases of CSS grid. |
+| [Fundamentals](./fundamentals/README.md)              | -- | -- | Explore the core principles of CSS grid, including grid creation, item placement, auto-placement, and visual grid areas.  |
+| [Practical Examples](./practical-examples/README.md)  | -- | -- | Demonstrate grid with real world examples. |
+| [Responsive Grids](./responsive-grids/README.md)      | -- | -- | Adapt grid layouts for different screen sizes using media queries |
+|  **Total Module**                                     | -- | -- |           |
 
 ## References
 
