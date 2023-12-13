@@ -1,12 +1,10 @@
-# ![CSS Grid - Grid Template Area](./assets/hero.png)
+# ![CSS Grid - Grid Template Areas](./assets/hero.png)
 
+`grid-template-areas` allows us to create a grid layout in a more intuitive way. First, you assign area names to the `html` elements you want control over in your grid. Then you create a "map" of these items using the `grid-template-areas` property on your grid container.
 
-## Understanding `grid-template-area`
+Notice how the structure of the named areas in `grid-template-areas` looks like a mini version of our page layout in our CSS. For this reason, some people find it easier to use `grid-template-areas` because you can "visualize" the grid in your CSS as you create it.
 
-`grid-template-area` allows us to create a grid layout in a more intuitive way. We define areas of the grid and assign them names, making it easier to place items exactly where we want. 
-
-
-We can use `grid-template-area` to easily place all of our page sections correctly. To test this, use the following CSS:
+If you want to test out this alternate syntax, you can replace all of your existing CSS with the following:
 
 ```css
 body {
@@ -16,7 +14,7 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr 2fr; 
   grid-template-areas: 
-    "nav nav nav"  /* place area name in cells you want to fill */
+    "nav nav nav"  /* place area names in cells you want to fill */
     "aside main main"
     "footer footer footer"; 
   min-height: 100vh;
@@ -52,6 +50,8 @@ a {
   color: black;
 }
 ```
+
+> **Naming Tip:** In the example above we've chosen to use the semantic HTML tag name as the grid template area name. However, you can name grid template areas just as you would any variable. We could have just as easily called these "section1", "section2", "section3" or more descriptively "featured-article", "trending-topics", or "advertisement". 
 
 ![CSS Grid lesson output](./assets/final.png)
 
