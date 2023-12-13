@@ -1,6 +1,5 @@
 # ![CSS Grid - Practical Examples](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to recognize real world examples of grid. 
 
 There are a lot of very well known websites that use grid to achieve their desired layout. Some examples include:
 

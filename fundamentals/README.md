@@ -1,67 +1,99 @@
 # ![CSS Grid - Fundamentals](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will explore the core principles of CSS Grid, including grid creation, item placement, auto-placement, and visual grid areas.
+**Learning objective:** By the end of this lesson, students will implement a full page layout using css grid properties. 
 
 ## Grid basics
 
 Grids are made of up of several components:
-- **Tracks (columns)**
-- **Cells**
-- **Areas**
-- **Gaps**
+- **Tracks (Rows and Columns)**
+  - **Rows**: Horizontal tracks of the grid. Their size can be defined using `grid-template-rows`.
+  - **Columns:** Vertical tracks of the grid. Their size is set with `grid-template-columns`.
+- **Cells** - The intersection of a grid row and a grid column, akin to a cell in a table. Each cell is a single unit of the grid where you can place your content
+- **Areas** - A grid area is a rectangular space created by combining one or more cells
+- **Gaps** - The spaces between rows and columns, previously known as 'gutters'.
 
 This diagram is helpful for visualizing the role each of these components plays:
 
 ![CSS Grid components -- tracks, cells, areas, and gaps](./assets/grid-components.png)
 
-To read more in depth about grid and its various properties, check out [the Complete Guide to CSS Grid from CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
-## Creating a grid
+To read more in depth about grid components and get a detailed user guide, check out [the Complete Guide to CSS Grid from CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
-The foundation of any CSS Grid layout is the **grid container**, an HTML element that serves as the parent for all grid items within. To define a grid container, we use the `display:grid` property on the desired element in our CSS. This transforms the element into a grid layout system, and enables us to place grid items within its structure. 
 
-Let's make our first grid! By the end of this lesson, we'll create something that looks like this:
+## Implementing a sample design
 
-![CSS Grid lesson output](./assets/grid-output.png)
+Let's start exploring CSS Grid by building a mock website layout. This is a great way to see how it works in a real-world example. We'll put together a straightforward page layout that really shows off what CSS Grid can do.
 
-In `index.html`, stub up your boilerplate and link to our CSS file:
+By the end of this lesson, we'll create a generic (yet common) website layout:
 
-```html
-<link rel="stylesheet" href="./css/style.css" />
-```
+![CSS Grid lesson output](./assets/final.png)
 
-Now, add the following code inside of the `<body>` tag:
+## Start with page structure
+
+Creating a layout starts with the physical structure of your page - the HTML. 
+
+We'll start with some basic components of a website - header, footer, and something in the middle. 
+
+Add the following starter code inside of the `<body>` tag of your HTML:
 
 ```html
 <body>
   <nav class="nav-links">
-    <div>Home</div>
-    <div>About</div>
-    <div>Widgets</div>
-    <div>Log out</div>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Widgets</a>
+    <a href="#">Log out</a>
   </nav>
-  <aside>Side bar</aside>
+  <aside>Side Content</aside>
   <main>Main Content</main>
-  <footer>Footer</footer>
+  <footer>Footer Content</footer>
 </body>
 ```
 
-And add this code into `css/style.css`:
+> Take a moment to open your page in the browser. Without any css to alter their positioning, these elements behave exactly like we'd expect block level elements to behave.
+
+![Raw HTML in the browser](./assets/html-only.png)
+
+## Creating your first grid
+
+The foundation of any CSS Grid layout is the **grid container**, an HTML element that serves as the parent for all grid items within.
+
+To create our gird container, we'll need to:
+
+1. **Identify the container element:** Begin by selecting an HTML element that will act as the container for your grid. This element will hold all the grid items. Given our current HTML structure, the `body` element is the most logical choice.
+
+2. **Apply the display property:**  To apply our grid style to the container, we'll add the `display: grid;` property to the `body` element. This step transforms the element into a `grid container`, and affects the positioning behavior of the child elements. 
+
+Create your grid by adding the following code into `css/style.css`:
 
 ```css
 body {
-  background-color: gray;
+  display: grid;
+}
+```
+
+Great! This code turns our `<body>` element into a **grid container**, but when we check the browser, everything looks the same?
+Until we give our grid more instructions about *how* our sections should be laid out, our page structure looks the same.
+
+Let's add a few  *non grid* styles to define the overall look of our page first. 
+
+```css
+body {
+  background-color: lightgray;
   display: grid;
   font-family: sans-serif;
   font-size: 24px;
-  margin: 0;
-  padding: 10px;
   min-height: 100vh;
 }
 ```
-This code turns our `<body>` element into a **grid container**. Using `min-height: 100vh` makes the `<body>` fill at least the height of the browser window. 
 
-Now to add a bit of style. Let's go ahead and change the color of some of the HTML elements we added. In your `css/style.css` file, add this code:
+These styles add a  light gray background, sans-serif font, and ensures that the body element stretches to at least the full height of the viewport. 
+
+![Non Grid styles added to HTML](./assets/non-grid-styles.png)
+
+> `min-height: 100vh` Sets the minimum height of the `<body>` to 100% of the viewport height (vh stands for viewport height). This ensures that the body takes up at least the full height of the screen, regardless of the amount of content. When we apply this, the page allocates equal space to all the vertical elements. This tells our grid layout to fill all available space in the browser window.
+
+Now to add a bit of differentiating style to the individual page sections. Add the following to your `css/style.css` file:
 
 ```css
 aside {
@@ -77,31 +109,122 @@ footer {
 }
 ```
 
-Right now, we should have something that looks like this:
-![Unstyled first output of CSS Grid exercise](./assets/unstyled-grid.png)
+Check your work in the browser:
 
-## Placing grid items
-Time to define the columns and rows necessary to bring our layout to life. Go back to the UI we want to design, and answer these questions:
-- **How many columns will we need to define?**
-- **How many rows?**
+![Unstyled first output of CSS Grid exercise](./assets/section-colors.png)
 
-Now, add these lines to our existing `body` rule in `css/style.css`:
+Why the extra gray around the edges? 
+
+### Remove browser defaults
+
+Browsers often set default styles for certain elements, including margins and padding on elements such as `headers` and `divs`. In this case the browser is adding some default margin to the `body` element, causing this extra stripe of gray around the pages edge. To gain complete control over our layout's margins and padding, let's reset these default styles.
+
 ```css
-grid-template-columns: 20% 80%;
-grid-template-rows: auto 1fr auto;
+body {
+  background-color: lightgray;
+  display: grid;
+  font-family: sans-serif;
+  font-size: 24px;
+  min-height: 100vh;
+  /* Add the following */
+  margin: 0;
+  padding: 0;
+}
 ```
 
-The `fr` unit is used by CSS Grid to represent a *fraction* of the available space. In our layout, the first column will be 1/5th the width of the window. The auto unit will let the content in that row determine the size of that row.
+No more extra margin!
 
-Our output is a bit of a mess right now:
+## Set grid properties
 
-![Disorganized web layout](assets/grid1.png)
+Time to define the columns and rows necessary to bring our layout to life.
 
-Notice the default behavior - each grid item gets placed in each cell across the columns from left to right. Next, let’s make both the <nav> and the <footer> span two columns each.
+Take a look at our design example again:
 
-To do this, we'll use the `grid-column` CSS property, which determines which **grid lines** a **grid item** starts and ends on. 
+![CSS Grid lesson output](./assets/final.png)
 
-Add this css:
+Considering the layout above: 
+
+- How many horizontal **rows** do we need to define?
+- How many vertical **columns** do we need to define?
+
+If you said **3 rows** and **2 columns**, you are correct! 
+
+We'll use the CSS properties `grid-template-columns` and `grid-template-rows` to define the size and number of columns and rows in our grid.
+
+Add the following lines to our existing `body` rule in `css/style.css`:
+
+```css
+body {
+  background-color: lightgray;
+  display: grid;
+  /* Add the following */
+  grid-template-rows: auto 1fr auto; /* three rows defined here */
+  grid-template-columns: 1fr 2fr; /* two columns defined here */
+  font-family: sans-serif;
+  font-size: 24px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+```
+
+Let's unpack what is happening here:
+
+`grid-template-rows: auto 1fr auto;`
+
+- This property defines the height of the rows in the grid.
+- `auto`: The first and third rows will automatically adjust their height based on the content they contain. The row height will be as tall as the content needs it to be, no more and no less.
+- `1fr`: The second row will be flexible and take up the remaining space in the grid container. 
+
+
+`grid-template-columns: 1fr 2fr;`
+
+- This property defines the width of the columns in the grid.
+- `1fr`: The first column will take up one fraction of the available space in the grid container.
+- `2fr`: The second column will take up twice the amount of space as the first column, in other words, two fractions of the available space.
+- Together, these two values divide the grid container's horizontal space into two columns with the specified width proportions.
+
+
+>  The `fr` unit in CSS Grid is a flexible and relative length unit used to define the size of columns and rows within a grid layout. It stands for "fraction" and represents a fraction of the available space in the grid container. 
+
+Take a look at the output after our changes. Not exactly what we were hoping for:
+
+![Disorganized web layout](assets/disorganized-grid.png)
+
+If you think about a grid with 3 rows and 2 columns, you're probably picturing something like this: 
+
+|1|2|
+|-|-|
+|3|4|
+|5|6|
+
+There are six spaces, but we only have 4 sections in our page, so grid will try and figure out the layout that we want based on this limited information. 
+
+By default, it gives each section one cell from left to right and omits the bottom row because it isn't in use.
+
+
+## Spanning multiple rows and cols
+
+In our design example the `nav`, and `footer` sections are meant to go all the way across the screen, spanning the width of both columns in the layout. 
+
+Let’s make both the `<nav>` and the `<footer>` span two columns each.
+
+There are several ways to accomplish this using the `grid-column` CSS property. Here are the two most common.
+
+  - **Spanning Multiple Columns**: Use `grid-column: span X;` to stretch a grid item across `X` number of columns. For example, `grid-column: span 2`; makes an item cover two columns.
+
+  - **Starting and Ending Lines**: Specify starting and ending column lines with `grid-column: start / end;`. For instance, `grid-column: 1 / 3;` stretches the item from the first to the third column line, spanning two columns.
+
+Let's add the following directly to the `nav` and `footer` elements:
+
+```css
+nav, 
+footer {
+  grid-column: span 2;
+}
+```
+
+We can achieve the same result with `start / end` using gide lines:
 
 ```css
 nav, 
@@ -110,153 +233,32 @@ footer {
 }
 ```
 
-Now we're making some progress!
-![Grid layout 2](./assets/grid2.png)
+That's more like it! 
 
-We can achieve the same result with `span`, like so:
-```css
+![Correct Layout](assets/correct-layout.png)
+
+
+Unsurprisingly, there’s also a `grid-row` property which allows you to specify the same behavior for grid cells spanning across rows. 
+
+Now that our page sections are in their proper positions, we can add a few extra styles to give the `nav` and `footer` some extra height. 
+
+
+```css 
 nav, 
 footer {
   grid-column: span 2;
+  height: 60px;
+}
+
+a {
+  text-decoration: none; /*  remove default underline */
+  color: black; 
 }
 ```
 
-Unsurprisingly, there’s a `grid-row` property as well. Both `grid-column` & `grid-row` are shorthand for `grid-column-start` & `grid-column-end`, and `grid-row-start` & `grid-row-end`, respectively.
+Check your final output: 
 
-Now that the `footer` element is on a row by itself, we can give it a height. Create a standalone `footer` rule and add this line to it: `height: 40px;`
-
-The `auto` value we gave to this row when we wrote our `grid-template-row` declaration means that this row will now expand to be 40px tall. The total height of our body is still `100vh` - so the middle row, which has a value of `1fr`, will shrink to accommodate the footer’s new size.
+![Final Layout](assets/final.png)
 
 
-## Autoplacement
-CSS Grid offers automatic placement, simplifying layout creation by automatically positioning grid items. The `grid-auto-flow` property controls the direction of automatic placement, with options like `row` and `column`. Use `grid-auto-rows` and `grid-auto-columns` to define the size of automatically generated rows and columns.
-
-
-## `grid-template-area`
-If we want a more intuitive approach to layout creation, we can use `grid-template-area`, which helps define visal grid areas. To do this, we use area names, and dictate where they should be positioned in our grid.
-
-Let's style the navbar with `grid-template-area`. Add the following code to `css/style.css`:
-
-```css
-.nav-links {
-  display: grid;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  grid-template-areas: "home widgets about logout";
-  grid-gap: 10px;
-}
-
-.nav-links div:nth-child(1) { grid-area: home; }
-.nav-links div:nth-child(2) { grid-area: about; }
-.nav-links div:nth-child(3) { grid-area: widgets; }
-.nav-links div:nth-child(4) { grid-area: logout; }
-```
-This code allows us to layout our navbar as a horizontal row. 
-
-![A navbar in a horizontal line](assets/horizontal-nav.png)
-
-But we could do even more with it if we wanted to. Watch what happens when we make the following change to our css:
-
-```css
-.nav-links {
-  display: grid;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  grid-template-areas: 
-   "home widgets"
-   "about logout";
-  grid-gap: 10px;
-}
-```
-
-![A nav bar split into two columns with CSS grid](./assets/two-cols-nav.png)
-
-Pretty neat, right? Let's go ahead and change it back into a horizontal row:
-
-```css
-.nav-links {
-  display: grid;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  grid-template-areas: "home widgets about logout";
-  grid-gap: 10px;
-}
-```
-
-We can also use `grid-template-area` to easily place all of our elements correctly. To do this, we're going to replace some of the CSS we wrote above:
-
-```css
-body {
-  background-color: gray;
-  display: grid;
-  font-family: sans-serif;
-  font-size: 24px;
-  margin: 0;
-  padding: 10px;
-  min-height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 0.5fr 1.5fr 3fr 0.5fr;
-  grid-template-areas: 
-    "nav nav nav"
-    "aside main main"
-    "aside main main"
-    "footer footer footer"; 
-}
-
-aside {
-  background-color: #38b18a;
-  grid-area: aside;
-}
-
-main {
-  background-color: #92d97c;
-  grid-area: main;
-}
-
-footer {
-  background-color: #f9f871;
-}
-
-nav {
-  grid-area: nav;
-}
-
-footer {
-  grid-area: footer;
-}
-```
-Note how we defined the amount of space we want each row to take up by using different `fr` values. 
-
-We're almost there! We just need to tweak our `.nav-links` CSS a bit and we'll be good to go!
-
-```css
-.nav-links {
-  display: grid;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  grid-gap: 0px; 
-  grid-template-areas: 
-    "home about widgets . . . logout";
-  grid-area: nav;
-}
-```
-
-Lastly, let's make a stylistic change by creating a class that will center the text of our elements. Add this to your CSS file:
-
-```css
-.flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-```
-
-With that class created in our CSS, we can add it to our semantic HTML elements `<aside>`, `<main>`, & `<footer>`. 
-
-Ta-da! We just created our first grid layout!
+Great job! You've just created your first grid layout!
