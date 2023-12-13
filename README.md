@@ -2,7 +2,7 @@
 
 ## About
 
-Introduce the core concepts of CSS grid.
+This module on CSS Grid is tailored for beginner to intermediate-level software engineers who are looking to expand their front-end development skills. CSS Grid offers a two-dimensional system for creating complex and responsive web layouts with ease. Throughout this module, we'll explore the fundamentals of CSS Grid, including grid containers, positioning items, and integrating Flexbox for individual item alignment. 
 
 ## Prerequisites
 
