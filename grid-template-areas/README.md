@@ -1,6 +1,23 @@
 # ![CSS Grid - Grid Template Areas](./assets/hero.png)
 
-`grid-template-areas` allows us to create a grid layout in a more intuitive way. First, you assign area names to the `html` elements you want control over in your grid. Then you create a "map" of these items using the `grid-template-areas` property on your grid container.
+`grid-template-areas` allows us to create a grid layout in a more intuitive way. First, you assign area names to the `html` elements you want to control your grid. Then you create a "map" of these items using the `grid-template-areas` property on your grid container.
+
+```css
+body {
+  display: grid;
+  font-family: sans-serif;
+  font-size: 24px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 2fr; 
+  grid-template-areas: 
+    "nav nav nav"  /* <- place area names in rows and cols as you want them displayed */
+    "aside main main"
+    "footer footer footer"; 
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+```
 
 Notice how the structure of the named areas in `grid-template-areas` looks like a mini version of our page layout in our CSS. For this reason, some people find it easier to use `grid-template-areas` because you can "visualize" the grid in your CSS as you create it.
 
@@ -14,7 +31,7 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr 2fr; 
   grid-template-areas: 
-    "nav nav nav"  /* place area names in cells you want to fill */
+    "nav nav nav"
     "aside main main"
     "footer footer footer"; 
   min-height: 100vh;
