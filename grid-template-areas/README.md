@@ -51,8 +51,9 @@ a {
   text-decoration: none;
   color: black;
 }
-
 ```
+
+![CSS Grid lesson output](./assets/final.png)
 
 ## Flexbox + Grid
 
@@ -70,4 +71,6 @@ Let's make a stylistic change by creating a class that will center the text of o
 
 Now add the class `flex-container` to the semantic HTML elements `<aside>`, `<main>`, & `<footer>`. 
 
-Ta-da! We just created our first grid layout!
+![Centered Section Titles](./assets/centered-section-titles.png)
+
+Ta-da! You now know two ways to structure a grid layout!
