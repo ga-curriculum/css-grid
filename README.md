@@ -19,7 +19,7 @@ This module on CSS Grid is tailored for beginner to intermediate-level software 
 | [Grid Template Areas](./grid-template-areas/README.md) | -- | -- | Use alternative syntax to layout grid template areas |
 | [Responsive Grids](./responsive-grids/README.md)       | -- | -- | Adapt grid layouts for different screen sizes using media queries |
 | [Practical Examples](./practical-examples/README.md)   | -- | -- | Identify CSS Grid in the wild |
-|  **Total Module**                                      | -- | -- |   |
+|  **Total Module**                                       | -- | -- |   |
 
 ## References
 
