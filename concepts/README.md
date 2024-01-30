@@ -1,6 +1,6 @@
 # ![CSS Grid - Concepts](./assets/hero.png)
 
-**Learning objective:** Understand the modern use cases of CSS Grid for web layouts.
+**Learning objective:** By the end of this lesson, students will understand CSS Grid as a versatile layout tool, capable of handling complex web designs with multi-column layouts, responsive design, and interactive UI components.
 
 ## The Revolution of CSS Grid
 
