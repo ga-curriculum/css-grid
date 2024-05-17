@@ -8,7 +8,7 @@ This module on CSS Grid is tailored for beginner to intermediate-level software 
 
 | Lesson | Skills |
 | ------ | ------ |
-| [Setup](../concepts/README.md)                          | Setting up the development environment |
+| [Setup](../setup/README.md)                          | Setting up the development environment |
 | [Concepts](../concepts/README.md)                       | Identify modern use cases for CSS grid |
 | [Fundamentals](../fundamentals/README.md)               | Implement a full page grid layout with grid rows and columns  |
 | [Grid Template Areas](../grid-template-areas/README.md) | Use alternative syntax to layout grid template areas |
