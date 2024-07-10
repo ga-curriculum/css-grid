@@ -58,7 +58,7 @@ Add the following starter code inside of the `<body>` tag of your HTML:
 
 The foundation of any CSS Grid layout is the **grid container**, an HTML element that serves as the parent for all grid items within.
 
-To create our gird container, we'll need to:
+To create our grid container, we'll need to:
 
 1. **Identify the container element:** Begin by selecting an HTML element that will act as the container for your grid. This element will hold all the grid items. Given our current HTML structure, the `body` element is the most logical choice.
 
