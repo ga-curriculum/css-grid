@@ -1,4 +1,7 @@
-# ![CSS Grid - Concepts](./assets/hero.png)
+<h1>
+  <span class="headline">CSS Grid</span>
+  <span class="subhead">Concepts</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand CSS Grid as a versatile layout tool, capable of handling complex web designs with multi-column layouts, responsive design, and interactive UI components.
 

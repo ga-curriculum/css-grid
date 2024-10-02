@@ -1,4 +1,7 @@
-# ![CSS Grid - Grid Template Areas](./assets/hero.png)
+<h1>
+  <span class="headline">CSS Grid</span>
+  <span class="subhead">Grid Template Areas</span>
+</h1>
 
 `grid-template-areas` allows us to create a grid layout in a more intuitive way. First, you assign area names to the `html` elements you want to control your grid. Then you create a "map" of these items using the `grid-template-areas` property on your grid container.
 

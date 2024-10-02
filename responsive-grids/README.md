@@ -1,4 +1,7 @@
-# ![CSS Grid - Responsive Grids](./assets/hero.png)
+<h1>
+  <span class="headline">CSS Grid</span>
+  <span class="subhead">Responsive Grids</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to adapt grid layouts for different screen sizes using media queries.
 

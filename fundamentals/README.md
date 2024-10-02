@@ -1,4 +1,7 @@
-# ![CSS Grid - Fundamentals](./assets/hero.png)
+<h1>
+  <span class="headline">CSS Grid</span>
+  <span class="subhead">Fundamentals</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will implement a full page layout using css grid properties. 
 
