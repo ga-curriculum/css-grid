@@ -19,7 +19,7 @@ CSS Grid emerged as a game-changer in web design, offering a two-dimensional sys
 
 <br>
 
- ![CSS Grid components -- tracks, cells, areas, and gaps](./assets/grid-components.png)
+ ![CSS Grid components - tracks, cells, areas, and gaps](./assets/grid-components.png)
 
 ## Ideal use cases for CSS Grid
 

@@ -17,7 +17,7 @@ Grids are made of up of several components:
 
 This diagram is helpful for visualizing the role each of these components plays:
 
-![CSS Grid components -- tracks, cells, areas, and gaps](./assets/grid-components.png)
+![CSS Grid components - tracks, cells, areas, and gaps](./assets/grid-components.png)
 
 
 To read more in depth about grid components and get a detailed user guide, check out [the Complete Guide to CSS Grid from CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/).
