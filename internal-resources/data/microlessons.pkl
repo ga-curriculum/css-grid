@@ -1,0 +1,46 @@
+import "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/static/v2/pkl/template.pkl" as Template
+
+// Add microlessons here, in the order they should be delivered
+
+setup = new Template.Microlesson {
+  friendlyName = "Setup"
+  dirName = "setup"
+  type = "Content"
+  videoUrl = ""
+}
+
+concepts = new Template.Microlesson {
+  friendlyName = "Concepts"
+  dirName = "concepts"
+  type = "Content"
+  videoUrl = ""
+}
+
+fundamentals = new Template.Microlesson {
+  friendlyName = "Fundamentals"
+  dirName = "fundamentals"
+  type = "Content"
+  videoUrl = ""
+}
+
+gridTemplateAreas = new Template.Microlesson {
+  friendlyName = "Grid Template Areas"
+  dirName = "grid-template-areas"
+  type = "Content"
+  videoUrl = ""
+}
+
+responsiveGrids = new Template.Microlesson {
+  friendlyName = "Responsive Grids"
+  dirName = "responsive-grids"
+  type = "Content"
+  videoUrl = ""
+}
+
+practicalExamples = new Template.Microlesson {
+  friendlyName = "Practical Examples"
+  dirName = "practical-examples"
+  type = "Content"
+  videoUrl = ""
+}
+

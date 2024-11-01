@@ -1,4 +1,7 @@
-# ![CSS Grid - Practical Examples](./assets/hero.png)
+<h1>
+  <span class="headline">CSS Grid</span>
+  <span class="subhead">Practical Examples</span>
+</h1>
 
 
 There are a lot of very well known websites that use grid to achieve their desired layout. Some examples include:
